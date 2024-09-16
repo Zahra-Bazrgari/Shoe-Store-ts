@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div
+      class="container flex flex-col items-center swiper max-w-screen-sm h-[100vh]"
+    >
+      <div class="header w-full h-14 flex items-center justify-start">
+        <img src="pictures\Vector.svg" alt="Vector" class="vector ml-6" />
+      </div>
+
+      <div class="logo my-28">
+        <img src="pictures\logo.svg" alt="Logo" />
+      </div>
+
+      <h2 class="font-bold text-3xl mb-12">Login to Your Account</h2>
+
+      <!-- <div class="inputs flex flex-col gap-2 w-full px-6">
+        
+      </div> -->
+
+      <form
+        id="login-inputs"
+        class="inputs flex flex-col gap-4 w-full px-6 justify-center items-center"
+      >
+        <div class="relative w-full">
+          <i
+            class="fa fa-envelope text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2"
+          ></i>
+          <input
+            type="text"
+            id="Username"
+            placeholder="Username"
+            class="pl-10 pr-2 py-2 border-2 w-full"
+            name="userName"
+          />
+        </div>
+
+        <div class="relative w-full">
+          <i
+            class="fa fa-lock text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2"
+          ></i>
+          <input
+            type="password"
+            id="Password"
+            placeholder="Password"
+            class="pl-10 pr-2 py-2 border-2 w-full"
+            name="password"
+          />
+          <i
+            id="togglePassword"
+            class="fa fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          ></i>
+        </div>
+
+        <div class="mt-3 font-semibold"><a href="/signup.html">Signup</a></div>
+
+        <button
+          type="submit"
+          id="login-btn"
+          class="log-in bg-[#212529] text-white w-[86%] mx-[7%] rounded-[30px] px-4 py-3 absolute bottom-7 hover:cursor-pointer"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+
+    <script type="module" src="src/scripts/login.ts"></script>
+  </body>
+</html>

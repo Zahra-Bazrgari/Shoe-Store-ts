@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Shoe Store</title>
+  </head>
+  <body>
+    <div
+      class="container flex flex-col items-center swiper max-w-screen-sm h-[100vh]"
+    >
+      <div class="swiper-wrapper max-w-screen-sm">
+        <div
+          id="on-boarding-1"
+          class="swiper-slide h-screen flex flex-col items-center justify-center"
+        >
+          <img src="pictures/WallpaperDog-20534536 1.svg" alt="" />
+          <h2 class="text-center m-8 text-3xl font-bold text-wrap">
+            We provide high-quality products just for you
+          </h2>
+
+          <button
+            class="nextButton bg-[#212529] text-white w-[86%] mx-[7%] rounded-[30px] px-4 py-3 absolute bottom-7 shover:cursor-pointer"
+          >
+            Next
+          </button>
+        </div>
+
+        <div
+          id="on-boarding-2"
+          class="swiper-slide h-screen flex flex-col items-center justify-center"
+        >
+          <img src="pictures\WallpaperDog-20397673 1.svg" alt="" />
+          <h2 class="text-center m-8 text-3xl font-bold">
+            Your satisfaction is our number one priority
+          </h2>
+          <button
+            class="nextButton bg-[#212529] text-white w-[86%] mx-[7%] rounded-[30px] px-4 py-3 absolute bottom-7 shover:cursor-pointer"
+          >
+            Next
+          </button>
+        </div>
+
+        <div
+          id="on-boarding-3"
+          class="swiper-slide h-screen flex flex-col items-center justify-center"
+        >
+          <img src="pictures\WallpaperDog-20534715 1.svg" alt="" />
+          <h2 class="text-center m-8 text-3xl font-bold">
+            Your satisfaction is our number one priority
+          </h2>
+          <button
+            class="getStarted bg-[#212529] text-white w-[86%] mx-[7%] rounded-[30px] px-4 py-3 absolute bottom-7 shover:cursor-pointer"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="btm-sliders grid grid-cols-3 gap-6 w-24 items-center justify-center text-center mt-16 mb-6 absolute bottom-24 left-[48%] translate-x-[-50%] z-10"
+      >
+        <div class="slider-icon w-9 h-[3px] bg-gray-300"></div>
+        <div class="slider-icon w-9 h-[3px] bg-gray-300"></div>
+        <div class="slider-icon w-9 h-[3px] bg-gray-300"></div>
+      </div>
+
+      <div class="swiper-pagination hidden"></div>
+
+      <div class="swiper-button-next hidden"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>

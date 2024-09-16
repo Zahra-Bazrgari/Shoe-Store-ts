@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mx-auto max-w-sm">
+        <div class="relative mb-4 w-full">
+            <a href="home.html" class="absolute top-2 left-2 text-gray-700 hover:text-black">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div id="sneakerPicture" class="w-full mb-4"></div>
+        </div>
+
+        <div id="sneakerDetails" class="p-4 bg-white rounded-lg w-full">
+            <div class="flex justify-between items-center mb-2">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <div id="nameContainer" class="text-2xl font-semibold">Running Sportwear</div>
+                        <i class="far fa-heart text-gray-700 hover:text-red-500 cursor-pointer"></i>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-1">
+                        <span class="bg-gray-200 text-xs rounded-full px-2 py-1">5,321 sold</span>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span class="ml-1">4.3 (5,389 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="descriptionContainer" class="border-t border-gray-300 text-gray-600 text-sm mt-4 pt-2">
+                <h4 class="font-bold mb-1">Description</h4>
+                <p id="descriptionText" class="h-10 overflow-hidden">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a id="toggleButton" href="#" class="text-black font-semibold">view more..</a>
+            </div>
+
+            <div class="flex justify-between items-center mt-4 mb-4">
+
+                <div id="size" class="flex items-center space-x-2"></div>
+
+                <div id="color" class="flex space-x-2"></div>
+            </div>
+
+
+            <div class="flex items-center mb-4">
+                <label class="mr-2 text-gray-600">Quantity</label>
+                <button class="quantity-btn w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">-</button>
+                <span id="quantity" class="mx-2">0</span>
+                <button class="quantity-btn w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">+</button>
+            </div>
+
+            <div class="flex justify-between items-center">
+                <div id="price" class="text-2xl font-bold mr-3"></div>
+                <button id="addToCart" class="bg-black text-white px-4 py-2 rounded-full w-full">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/scripts/sneakerDetails.ts"></script>
+</body>
+
+</html>
