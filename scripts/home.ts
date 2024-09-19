@@ -14,9 +14,10 @@ let debounceTimeout: number | null = null;
 async function main(): Promise<void> {
   try {
     const response = await getUserInfo();
-    console.log(response);
+    console.log("User Info: ", response);
   } catch (error) {
-    errorHandler(error as Error);
+    console.error("Error fetching user info: ", error);
+    // errorHandler(error as Error);
   }
 }
 
@@ -55,8 +56,7 @@ async function displayGreeting(): Promise<void> {
 
 async function fetchSneakers(page = 1, limit = 100): Promise<void> {
   const sessionToken = getSessionToken();
-
-  let url = `${urls.items.sneaker}?page=${page}&limit=${limit}`;
+  const url = `http://localhost:3000/sneaker?page=${page}&limit=${limit}`;
 
   try {
     const response = await axios({
@@ -65,14 +65,27 @@ async function fetchSneakers(page = 1, limit = 100): Promise<void> {
       headers: { Authorization: `Bearer ${sessionToken}` },
     });
 
-    console.log("Get sneakers response: ", response);
-    allSneakers = response.data.data;
+    console.log("Response Status:", response.status);
+    console.log("Response Headers:", response.headers);
+    console.log("Response Data:", response.data);
+
+    if (response.data && Array.isArray(response.data.data)) {
+      allSneakers = response.data.data;
+    } else {
+      console.error("Invalid sneaker data structure:", response.data);
+      allSneakers = [];
+    }
+
     generateBrandButtons();
     renderSneakers(1, 10);
   } catch (error) {
-    errorHandler(error as Error);
+    console.error("Error fetching sneakers: ", error);
+    // errorHandler(error as Error);
   }
 }
+
+
+
 
 function generateBrandButtons(): void {
   const container = document.getElementById("brandContainer") as HTMLElement;

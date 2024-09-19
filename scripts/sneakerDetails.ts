@@ -10,22 +10,22 @@ async function fetchSneakerDetails(sneakerId: string): Promise<void> {
   const sessionToken = getSessionToken();
 
   try {
-    const response = await axios.get<{ data: Sneaker }>(
+    const response = await axios.get<Sneaker>(
       `http://localhost:3000/sneaker/item/${sneakerId}`,
       {
         headers: { Authorization: `Bearer ${sessionToken}` },
       }
     );
 
-    if (response.data) {
-      displaySneakerDetails(response.data.data);
-    } else {
-      console.error("Unexpected response format:", response.data);
-    }
+    console.log("Sneaker Data:", response.data);
+
+    displaySneakerDetails(response.data);
   } catch (error) {
     console.error("Error fetching sneaker details:", (error as Error).message);
   }
 }
+
+
 
 function displaySneakerDetails(sneaker: Sneaker): void {
   const photoContainer = document.getElementById("sneakerPicture") as HTMLElement;

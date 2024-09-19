@@ -39,6 +39,6 @@ loginForm.addEventListener("submit", async (event) => {
     window.location.href = "/home.html";
 
   } catch (error) {
-    errorHandler(error as Error);
+    // errorHandler(error as Error);
   }
 });
